@@ -178,7 +178,7 @@
         }
 
         .content-list .bar-list {
-            width: 60%;
+            width: 50%;
             padding: 10px 20px 10px 30px;
         }
         .content-list .date {
@@ -418,9 +418,25 @@
                         data:[
                             {value:110, name:'直接访问'},
                             {value:310, name:'邮件营销'},
-                        ]
-                    }
-                ]
+                        ],
+                        label: {
+                                // 去掉文字提示
+                            normal: {
+                                show: false,
+                                position: 'inside',
+                                formatter:"{b}:{d}%"
+                            },
+                            // 去掉折线
+                            labelLine: {
+                                normal: {
+                                    show: false
+                                }
+                            }
+                        }
+                    },
+
+                ],
+
             };
             pieChart1.setOption(pie1);
             pieChart2.setOption(pie1);
