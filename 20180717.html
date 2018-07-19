@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
     <style>
         body {
             background-color: #f5f8fa;
@@ -156,9 +154,11 @@
             width: 40%;
         }
         /*内容*/
+
         .content-list {
             height: 288px;
             margin-top: 10px;
+            position: relative;
         }
         .content-list .date, .content-list .title {
             line-height: 288px;
@@ -198,6 +198,22 @@
 
         .content-list .morning {
             border-right: 1px solid #f6f6f6;
+        }
+        .content-list .data-line {
+            position: absolute;
+            bottom: 50%;
+            width: 2px;
+            height: 110%;
+            background-color: #666;
+        }
+        .content-list .data-line .data-line-point {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #666;
+            bottom: -3px;
+            left: -2px;
         }
         .pie-chart {
             text-align: center;
@@ -349,6 +365,10 @@
                         </div>
                 </div>
             </div>
+                <!--左边线条-->
+                <div class="data-line" style="height: 50%;">
+                    <div class="data-line-point"></div>
+                </div>
         </div>
             <div class="content-list white-bg row">
                 <!--日期-->
@@ -441,6 +461,10 @@
                             <p>同期排名 <span class="question">?</span></p>
                         </div>
                     </div>
+                </div>
+                <!--左边线条-->
+                <div class="data-line">
+                    <div class="data-line-point"></div>
                 </div>
             </div>
     </div>
