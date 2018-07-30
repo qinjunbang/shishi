@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style  type="text/css">
+   *{
+       margin: 0;
+       padding: 0;
+   }
+  #box{
+      width: 200px;
+      height:200px;
+      background: deepskyblue;
+      /*transform: translateX(200px)  scale(0.5);*/
+  }
+    </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+<script  src="./transformCss.js"></script>
+<script type="text/javascript">
+    var  box = document.getElementById("box")
+    transformCss(box,'translateX',200);
+
+   console.log(transformCss(box,'translateX'))
+//    写
+//    function  transformCss(node,name,value) {
+//        if(!node.transform){
+//            node.transform = {};
+//        }
+//        if(arguments.length>2){
+//            //写
+//            //把名值对添加到对象
+//            node.transform[name]=value;
+//            var result ='';
+//            for(var item in node.transform){
+//                    switch (item){
+//                        case 'rotate':
+//                        case 'skew':
+//                        case 'skewX':
+//                        case 'skewY':
+//                        case 'skewZ':
+//                            result += item+ '('+ node.transform[item] +'deg) ';
+//                            break;
+//                        case 'scale':
+//                        case 'scaleX':
+//                        case 'scaleY':
+//                        case 'scaleZ':
+//                            result += item+ '('+ node.transform[item] +') ';
+//                            break;
+//                        case 'translate':
+//                        case 'translateX':
+//                        case 'translateY':
+//                        case 'translateZ':
+//                            result += item+ '('+ node.transform[item] +'px) ';
+//                            break;
+//
+//                    };
+//
+//            };
+//            node.style.transform = result;
+//
+//        }else{
+//            //读
+//            if(typeof node.transform[name] == 'undefined'){
+//                if(name == 'scale'||name == 'scaleX'||name=='scaleY'){
+//                    value =1
+//
+//                }else{
+//                    value =0
+//                }
+//
+//
+//            }else{
+//               value = node.transform[name] ;
+//
+//            }
+//            return value;
+//
+//        }
+//
+//
+//    }
+
+</script>
+</body>
+
+</html>
